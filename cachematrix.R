@@ -1,7 +1,7 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
+## This function will create a object that is a list of functions: set, get, setinverse, getinverse
 
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
@@ -10,15 +10,15 @@ makeCacheMatrix <- function(x = matrix()) {
         m <<- NULL
     }
     get <- function() x
-    setmean <- function(solve) m <<- solve
-    getmean <- function() m
+    setinverse <- function(solve) m <<- solve
+    getinverse <- function() m
     list(set = set, get = get,
          setinverse = setinverse,
          getinverse = getinverse)
 }
 
 
-## Write a short comment describing this function
+## If x is already cached it will returned the cached data, if not it will create new data.
 
 cacheSolve <- function(x, ...) {
     m <- x$getinverse()
