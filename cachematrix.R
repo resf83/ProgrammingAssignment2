@@ -1,7 +1,4 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## This function will create a object that is a list of functions: set, get, setinverse, getinverse
+## This function returns a list of functions with 4 named elements: set, get, setinverse, getinverse
 
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
@@ -18,7 +15,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## If x is already cached it will returned the cached data, if not it will create new data.
+## This function will return the inverse matrix. 
+## If the matrix is already cached it will returned the cached matrix, if not it will create a new inverse matrix.
 
 cacheSolve <- function(x, ...) {
     m <- x$getinverse()
